@@ -8,10 +8,10 @@ import scala.collection.mutable
 
 object Traversable{
   def asciiDisplay(root:TreeNode[String]):Seq[String] = {
-    val res = mutable.ListBuffer[String]()
     if(root == null) {
       Seq()
     } else {
+      val res = mutable.ListBuffer[String]()
       collect(List(root), 0, res )
       res
     }
